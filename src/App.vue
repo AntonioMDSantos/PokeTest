@@ -3,30 +3,20 @@
     <div class="searchText">
       <PokeSearch @search="getPokemon" />
     </div>
-    <PokeInfo v-if="showInfo" v-bind:pokemon="selectedPokemon"  />
     <div class="evolutionPoke">
-      <ul>
-        <PokeEvolution
-        v-for="evolution in evolutions"
-          v-bind:key="evolution.id"
-          v-bind:evolution="evolution"
-          @select="showPokemonInfo"
-        />
-      </ul>
+      <PokeList :evolutions="evolutions" :selectedPokemon="selectedPokemon"  />
     </div>
   </div>
 </template>
 <script>
 import axios from "axios";
 import PokeSearch from "./components/PokeSearch.vue";
-import PokeInfo from "./components/PokeInfo.vue";
-import PokeEvolution from "./components/PokeEvolution.vue";
+import PokeList from "./components/PokeList.vue";
 
 export default {
   components: {
     PokeSearch,
-    PokeInfo,
-    PokeEvolution,
+    PokeList,
   },
   data() {
     return {
