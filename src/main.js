@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import PokeInfo from './components/PokeInfo.vue'
-import PokeEvolution from './components/PokeEvolution.vue'
+import PokeCard from './components/PokeCard.vue'
+import PokeList from './components/PokeList.vue'
 
-Vue.component('PokeInfo', PokeInfo)
-Vue.component('PokeEvolution', PokeEvolution)
+Vue.component('PokeCard', PokeCard)
+Vue.component('PokeList', PokeList)
 
 new Vue({
   render: h => h(App)
