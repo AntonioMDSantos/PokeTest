@@ -4,7 +4,7 @@
       <PokeSearch @search="getPokemon" />
     </div>
     <div class="evolutionPoke">
-      <PokeList :evolutions="evolutions" :selectedPokemon="selectedPokemon"  />
+      <PokeList :evolutions="evolutions" :selectedPokemon="selectedPokemon" />
     </div>
   </div>
 </template>
@@ -22,16 +22,15 @@ export default {
     return {
       selectedPokemon: null,
       evolutions: [],
-      showInfo: false
-
+      showInfo: false,
     };
   },
   methods: {
     showPokemonInfo(pokemon) {
-    this.selectedPokemon = pokemon;
-    this.showInfo = true;
-  },
-   
+      this.selectedPokemon = pokemon;
+      this.showInfo = true;
+    },
+
     async getPokemon(name) {
       try {
         const response = await axios.get(
@@ -71,6 +70,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Karla&family=PT+Sans+Narrow:wght@700&family=Quicksand:wght@700&family=Source+Code+Pro&display=swap");
+*{
+  font-family: "Fredoka One", cursive;
+}
 body {
   margin: 0;
   padding: 0;

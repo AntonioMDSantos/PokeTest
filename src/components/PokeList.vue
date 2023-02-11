@@ -1,9 +1,9 @@
 <template>
   <section>
     <div class="card-list">
-        <div class="card" v-for="evolution in evolutions" :key="evolution.name">
-          <PokeCard :evolution="evolution" :selectedPokemon="selectedPokemon" />
-        </div>
+      <div class="card" v-for="evolution in evolutions" :key="evolution.name">
+        <PokeCard :evolution="evolution" :selectedPokemon="selectedPokemon" />
+      </div>
     </div>
   </section>
 </template>
@@ -13,18 +13,18 @@ import PokeCard from "./PokeCard.vue";
 
 export default {
   components: {
-    PokeCard
+    PokeCard,
   },
   props: {
     evolutions: {
       type: Array,
-      required: true
+      required: true,
     },
     selectedPokemon: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -32,11 +32,10 @@ export default {
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .card {
   width: calc(100% / 3 - 1rem);
-
 }
 </style>
