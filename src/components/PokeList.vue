@@ -41,7 +41,6 @@ export default {
           gap: "6rem",
         };
       } else {
-        // fallback style
         return {
           display: "flex",
           "flex-wrap": "wrap",
