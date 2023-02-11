@@ -12,7 +12,7 @@
       </h1>
     </div>
     <div class="info" v-if="showInfo">
-      <p>HP: {{ selectedPokemon?.stats[5].base_stat }}</p>
+      <p>HP: <span>{{ selectedPokemon?.stats[5].base_stat }}</span></p>
       <p>Ataque: {{ selectedPokemon.stats[4].base_stat }}</p>
       <p>Defesa: {{ selectedPokemon.stats[3].base_stat }}</p>
       <p>Atq especial: {{ selectedPokemon.stats[2].base_stat }}</p>
@@ -120,7 +120,7 @@ article {
         display: initial;
       }
       h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
       .image {
         width: 7vh;
