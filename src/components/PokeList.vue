@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="evolution in evolutions" :key="evolution.name">
-        <PokeCard :evolution="evolution" :selectedPokemon="selectedPokemon" />
-      </li>
-    </ul>
-  </div>
+  <section>
+    <div class="card-list">
+        <div class="card" v-for="evolution in evolutions" :key="evolution.name">
+          <PokeCard :evolution="evolution" :selectedPokemon="selectedPokemon" />
+        </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -27,3 +27,16 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; 
+}
+
+.card {
+  width: calc(100% / 3 - 1rem);
+
+}
+</style>

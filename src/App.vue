@@ -79,12 +79,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background-image: url(./assets/image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   ul {
     position: absolute;
-  
+  }
+  .searchText {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    form {
+      text-align: center;
+    }
   }
 }
-
-
 </style>
+
+
+
+
